@@ -1,0 +1,37 @@
+# Vercel Environment Variables — STAGING
+
+NODE_ENV=production
+
+# Paste the Neon pooled connection string from Neon -> Connect.
+# Do not commit the real value to GitHub.
+DATABASE_URL=postgresql://...
+
+DATABASE_SSL=true
+DB_POOL_MAX=3
+SESSION_HOURS=12
+
+# Existing JK frontend allowed to call this backend:
+CORS_ORIGINS=https://jk-investment-system.trolley-traces-6o.chatgpt.site
+
+# One-time random secret for FIRST admin creation.
+# Delete this variable after admin bootstrap succeeds.
+BOOTSTRAP_SECRET=PUT_A_LONG_RANDOM_SECRET_HERE
+
+# Leave blank for first deploy if only testing login.
+# REQUIRED before enabling Authenticator 2FA.
+TWO_FACTOR_ENCRYPTION_KEY=
+
+
+# ------------------------------------------------------------
+# Google Drive backup (PRODUCTION)
+# Keep the Google OAuth consent app in "In Production" status.
+# Never commit real secrets or refresh tokens to GitHub.
+# ------------------------------------------------------------
+GOOGLE_OAUTH_CLIENT_ID=
+GOOGLE_OAUTH_CLIENT_SECRET=
+GOOGLE_OAUTH_REFRESH_TOKEN=
+GOOGLE_DRIVE_FOLDER_ID=
+
+# Vercel Cron automatically sends: Authorization: Bearer <CRON_SECRET>
+# Use a long random value and configure it only in Vercel.
+CRON_SECRET=

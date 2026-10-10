@@ -1,0 +1,33 @@
+{
+  "name": "jk-investment-backend-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "JK Investment backend API - Neon + Vercel staging",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test:backup-routes": "node tests/backup-routes.test.js",
+    "create-admin": "node scripts/create-admin.js",
+    "check:production": "node scripts/production-check.js",
+    "migrate:deployment-safety": "node scripts/migrate-deployment-safety.js",
+    "test:deployment-safety": "node --test tests/deployment-safety.test.js"
+  },
+  "dependencies": {
+    "@vercel/functions": "3.9.11",
+    "argon2": "0.45.1",
+    "cors": "2.8.6",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "express-rate-limit": "8.7.0",
+    "helmet": "8.3.0",
+    "otplib": "13.5.0",
+    "pdfkit": "0.17.2",
+    "pg": "8.23.0",
+    "qrcode": "1.5.4",
+    "zod": "4.5.4"
+  }
+}

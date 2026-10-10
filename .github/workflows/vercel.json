@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "express",
+  "crons": [
+    {
+      "path": "/api/cron/backup",
+      "schedule": "0 18 * * 0"
+    },
+    {
+      "path": "/api/cron/whatsapp",
+      "schedule": "5 18 * * *"
+    }
+  ],
+  "functions": {
+    "index.js": {
+      "maxDuration": 300
+    }
+  }
+}
